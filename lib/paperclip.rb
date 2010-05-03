@@ -27,6 +27,7 @@
 
 require 'erb'
 require 'tempfile'
+require 'active_record'
 require 'paperclip/upfile'
 require 'paperclip/iostream'
 require 'paperclip/geometry'
@@ -37,6 +38,7 @@ require 'paperclip/interpolations'
 require 'paperclip/style'
 require 'paperclip/attachment'
 require 'paperclip/callback_compatability'
+
 if defined?(Rails.root) && Rails.root
   Dir.glob(File.join(File.expand_path(Rails.root), "lib", "paperclip_processors", "*.rb")).each do |processor|
     require processor
